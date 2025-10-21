@@ -1,0 +1,247 @@
+/* ===== RESET ===== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+/* ===== LAYOUT BASE ===== */
+body {
+	background: radial-gradient(circle at top, #0a0f29 0%, #000 100%);
+	color: #e6e6e6;
+	overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.limitar-secao {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 60px 20px;
+}
+
+/* ===== CABEÇALHO ===== */
+.topo {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+	backdrop-filter: blur(10px);
+	background: rgba(10, 10, 30, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 2px 20px rgba(255, 255, 255, 0.05);
+	z-index: 1000;
+}
+
+.topo a {
+	color: #f0f0f0;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 17px;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.topo a::after {
+	content: "";
+	position: absolute;
+	bottom: -6px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, #e63946, #ffd166);
+	transition: width 0.3s ease;
+	border-radius: 10px;
+}
+
+.topo a:hover {
+	color: #ffd166;
+}
+
+.topo a:hover::after {
+	width: 100%;
+}
+
+/* ===== BANNER ===== */
+.banner {
+	height: 90vh;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #000),
+		url("http://www.devmedia.com.br/arquivos/cursos/css_modf_elements/embed/aula-8/img/capa.jpg") center/cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	position: relative;
+	box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.banner::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent 70%);
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2, h3 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #fff;
+	text-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+h2 {
+	font-size: 1.8rem;
+	margin-bottom: 30px;
+	color: #ffd166;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+	color: #e63946;
+	margin-bottom: 10px;
+}
+
+/* ===== SEÇÃO SINOPSE ===== */
+.secao-sinopse {
+	background: linear-gradient(180deg, #0a0f29, #0d1b4c);
+	border-radius: 20px;
+	box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+	margin: 80px auto;
+	padding: 80px 40px;
+	color: #eee;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.secao-sinopse::before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent 70%);
+	filter: blur(50px);
+}
+
+/* ===== TEXTO ===== */
+.secao-sinopse p {
+	max-width: 800px;
+	margin: 0 auto 25px;
+	font-size: 1.05rem;
+	line-height: 1.8em;
+	color: #dcdcdc;
+}
+
+/* ===== SEÇÃO DISPONIBILIDADE ===== */
+.secao-canais {
+	background: linear-gradient(145deg, #091131, #001f5f);
+	box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4);
+	text-align: center;
+	color: #fff;
+	padding: 90px 20px;
+	border-top: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.img-plataformas {
+	width: 70%;
+	border-radius: 20px;
+	margin: 40px 0;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-plataformas:hover {
+	transform: scale(1.03);
+	box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+}
+
+/* ===== SEÇÃO TEMPORADAS ===== */
+.secao-temporadas {
+	padding: 90px 20px;
+	background: linear-gradient(180deg, #0d1b4c, #000);
+	color: #eaeaea;
+}
+
+.conteudo_temporada {
+	background: rgba(255, 255, 255, 0.04);
+	padding: 25px 30px;
+	margin-bottom: 25px;
+	border-radius: 12px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(6px);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo_temporada:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+
+/* ===== GALERIA ===== */
+.secao-imagens {
+	background: linear-gradient(180deg, #000, #0a0f29);
+	padding: 80px 20px;
+	text-align: center;
+	position: relative;
+}
+
+.galeria {
+	display: flex;
+	justify-content: flex-start;
+	overflow-x: auto;
+	padding-bottom: 20px;
+	scrollbar-color: #ffd166 #0a0f29;
+	gap: 25px;
+}
+
+.galeria img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 15px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria img:hover {
+	transform: perspective(600px) rotateY(10deg) scale(1.05);
+	box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+	background: #0a0f29;
+	padding: 40px 0;
+	text-align: center;
+	color: #999;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 -5px 20px rgba(255, 215, 0, 0.1);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(90deg, #e63946, #ffd166);
+	border-radius: 10px;
+}
